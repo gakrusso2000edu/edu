@@ -558,6 +558,7 @@
         .results-image {
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            width: 100%;
         }
 
         .results-guarantee {
@@ -763,6 +764,7 @@
             justify-content: center;
             gap: 8px;
             margin-bottom: 48px;
+            flex-wrap: wrap;
         }
 
         .programs-tab {
@@ -797,6 +799,7 @@
         .programs-image {
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            width: 100%;
         }
 
         .programs-list {
@@ -893,11 +896,6 @@
             font-size: 1rem;
         }
 
-        .contraindications-list li::before {
-            content: '';
-            font-size: 1.1rem;
-        }
-
         .contraindications-note {
             background: var(--primary-light);
             padding: 20px;
@@ -940,6 +938,10 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
         }
 
         .location-card-body {
@@ -1052,11 +1054,100 @@
             color: rgba(255,255,255,0.4);
         }
 
-        /* ===== SVG ИКОНКИ ===== */
-        .icon-svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
+        /* ===== МОДАЛЬНОЕ ОКНО ВИДЕО ===== */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .video-modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10000;
+        }
+
+        .video-modal-close:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+
+        /* ===== ПЛАВАЮЩАЯ КНОПКА TELEGRAM ===== */
+        .floating-tg {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: #0088cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,136,204,0.4);
+            z-index: 998;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .floating-tg:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-tg svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 20px rgba(0,136,204,0.4); }
+            50% { box-shadow: 0 4px 30px rgba(0,136,204,0.6); }
+            100% { box-shadow: 0 4px 20px rgba(0,136,204,0.4); }
         }
 
         /* ===== АНИМАЦИИ ===== */
@@ -1100,6 +1191,8 @@
 
         .mobile-menu a:last-child {
             border-bottom: none;
+            color: var(--primary);
+            font-weight: 600;
         }
 
         /* ===== RESPONSIVE ===== */
@@ -1229,40 +1322,12 @@
                 width: 100%;
                 max-width: 300px;
             }
-        }
-
-        /* ===== ПЛАВАЮЩАЯ КНОПКА TELEGRAM ===== */
-        .floating-tg {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 60px;
-            height: 60px;
-            background: #0088cc;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(0,136,204,0.4);
-            z-index: 999;
-            transition: var(--transition);
-            animation: pulse 2s infinite;
-        }
-
-        .floating-tg:hover {
-            transform: scale(1.1);
-        }
-
-        .floating-tg svg {
-            width: 28px;
-            height: 28px;
-            fill: white;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 4px 20px rgba(0,136,204,0.4); }
-            50% { box-shadow: 0 4px 30px rgba(0,136,204,0.6); }
-            100% { box-shadow: 0 4px 20px rgba(0,136,204,0.4); }
+            
+            .video-modal-close {
+                top: -35px;
+                right: 5px;
+                font-size: 28px;
+            }
         }
     </style>
 </head>
@@ -1302,7 +1367,7 @@
         <a href="#results" onclick="closeMobile()">Результаты</a>
         <a href="#business" onclick="closeMobile()">Для бизнеса</a>
         <a href="#locations" onclick="closeMobile()">Где попробовать</a>
-        <a href="https://t.me/WinnRusso" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">Связаться в Telegram</a>
+        <a href="https://t.me/WinnRusso" target="_blank" rel="noopener">Связаться в Telegram</a>
     </div>
 
     <!-- ===== HERO СЕКЦИЯ ===== -->
@@ -1319,12 +1384,11 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="https://t.me/WinnRusso" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-1-1 4-4-4-4 1-1 5 5-5 5z"/></svg>
                         Записаться на пробную процедуру
                     </a>
-                    <a href="https://kinescope.io/x76Hyyd7VEexGvzLGzURoF" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <button class="btn btn-outline btn-lg open-video-btn">
                         ▶ Смотреть видео
-                    </a>
+                    </button>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
@@ -1342,12 +1406,12 @@
                 </div>
             </div>
             <div class="hero-visual fade-up">
-                <!-- Изображение клиники -->
-                <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/1578bc7a0-fc6a-4a7f-b775-a5ebf31df14f.png" alt="Клиника Smart Body Master с профессиональным оборудованием" class="hero-image">
+                <!-- Изображение клиники/аппарата -->
+                <img src="https://gakrusso2000edu.github.io/edu/sbm/img/2sbmapparatall.JPG" alt="Smart Body Master - итальянское оборудование для коррекции фигуры" class="hero-image">
                 <!-- Кнопка видео -->
-                <a href="https://kinescope.io/x76Hyyd7VEexGvzLGzURoF" class="hero-video-trigger" target="_blank" rel="noopener" aria-label="Смотреть видео презентацию">
+                <div class="hero-video-trigger open-video-btn" aria-label="Смотреть видео презентацию">
                     <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1360,7 +1424,7 @@
             
             <div class="problems-grid">
                 <div class="problem-card fade-up">
-                    <div class="problem-icon"></div>
+                    <div class="problem-icon">📉</div>
                     <h3>Диеты не работают</h3>
                     <p>Вес возвращается после каждой диеты, организм сопротивляется ограничениям</p>
                 </div>
@@ -1385,7 +1449,7 @@
                     <p>После резкого похудения кожа не успевает подтянуться</p>
                 </div>
                 <div class="problem-card fade-up">
-                    <div class="problem-icon"></div>
+                    <div class="problem-icon">💸</div>
                     <h3>Деньги на ветер</h3>
                     <p>Дорогие процедуры без гарантированного результата</p>
                 </div>
@@ -1399,7 +1463,7 @@
             <div class="solution-grid">
                 <div class="fade-up">
                     <!-- Изображение аппарата -->
-                    <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/1ee1684b8-4e94-49d9-9414-837cd46fceba.png" alt="Smart Body Master - портативный аппарат для коррекции фигуры" class="solution-image">
+                    <img src="https://gakrusso2000edu.github.io/edu/sbm/img/1sbmapparat.png" alt="Smart Body Master - портативный аппарат для коррекции фигуры" class="solution-image">
                 </div>
                 <div class="fade-up">
                     <h2 style="margin-bottom: 16px;">Итальянская технология, которая <span class="highlight">меняет правила игры</span></h2>
@@ -1428,7 +1492,7 @@
                             </div>
                         </div>
                         <div class="solution-feature">
-                            <div class="solution-feature-icon"></div>
+                            <div class="solution-feature-icon">📊</div>
                             <div>
                                 <h4>Биоимпедансный анализ</h4>
                                 <p>Точная диагностика за доли секунды: жир, жидкость, мышцы</p>
@@ -1488,7 +1552,7 @@
             <div class="results-content">
                 <div class="fade-up">
                     <!-- Изображение до/после -->
-                    <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/1d2229884-aa16-46fd-819e-430f13dc616f.png" alt="Результаты коррекции фигуры Smart Body Master - до и после" class="results-image">
+                    <img src="https://gakrusso2000edu.github.io/edu/sbm/img/2sbmapparatall.JPG" alt="Результаты коррекции фигуры Smart Body Master" class="results-image">
                 </div>
                 <div class="fade-up">
                     <h2 style="margin-bottom: 16px;">Гарантированный результат <span class="highlight">или возврат денег</span></h2>
@@ -1540,12 +1604,12 @@
                     <p>С матрасом и 16 кармашками для подушечек с обеих сторон</p>
                 </div>
                 <div class="kit-item fade-up">
-                    <div class="kit-item-icon"></div>
+                    <div class="kit-item-icon">🔘</div>
                     <h3>16 подушечек</h3>
                     <p>Ультразвуковые, по 84 см² каждая. Общая площадь 1344 см²</p>
                 </div>
                 <div class="kit-item fade-up">
-                    <div class="kit-item-icon"></div>
+                    <div class="kit-item-icon">📐</div>
                     <h3>Биоимпеданс</h3>
                     <p>Датчик для мгновенного анализа состава тела</p>
                 </div>
@@ -1555,7 +1619,7 @@
                     <p>Фотобиомодуляция: красный свет + пептидный состав</p>
                 </div>
                 <div class="kit-item fade-up">
-                    <div class="kit-item-icon"></div>
+                    <div class="kit-item-icon">⚡</div>
                     <h3>Маска электростимуляции</h3>
                     <p>16 мини-электродов для подтяжки мышц лица</p>
                 </div>
@@ -1654,8 +1718,8 @@
 
             <div class="programs-content active" id="body-programs">
                 <div class="fade-up">
-                    <!-- Изображение процедуры -->
-                    <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/100d833ea-46f7-4ebb-8753-5e4a2e840e67.png" alt="Процедура Smart Body Master - электростимуляция тела" class="programs-image">
+                    <!-- Изображение процедуры тела -->
+                    <img src="https://gakrusso2000edu.github.io/edu/sbm/img/3sbmbody.JPG" alt="Процедура Smart Body Master - электростимуляция тела" class="programs-image">
                 </div>
                 <div class="fade-up">
                     <h3 style="margin-bottom: 20px;">Программы для тела</h3>
@@ -1674,8 +1738,7 @@
 
             <div class="programs-content" id="face-programs">
                 <div class="fade-up">
-                    <!-- Изображение LED маски -->
-                    <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/11d6c1fdd-0596-43b4-87f2-90d4270eb8cf.png" alt="LED маска для лица - фотобиомодуляция" class="programs-image">
+                    <img src="https://gakrusso2000edu.github.io/edu/sbm/img/3sbmbody.JPG" alt="Процедура Smart Body Master - электростимуляция лица" class="programs-image">
                 </div>
                 <div class="fade-up">
                     <h3 style="margin-bottom: 20px;">Программы для лица</h3>
@@ -1727,7 +1790,7 @@
                     <p>Жир уходит именно там, где вы хотите — в локализованных зонах</p>
                 </div>
                 <div class="advantage-card fade-up">
-                    <h3> Готовый бизнес</h3>
+                    <h3>🚀 Готовый бизнес</h3>
                     <p>Обучение, маркетинг, клиентская база — всё включено в пакет</p>
                 </div>
             </div>
@@ -1742,11 +1805,11 @@
 
             <div class="contraindications-wrapper fade-up">
                 <ul class="contraindications-list">
-                    <li>Возраст до 18 лет (организм растёт и развивается)</li>
-                    <li>Онкологические заболевания</li>
-                    <li>Открытые раны на теле</li>
-                    <li>Металлические импланты (кроме зубных)</li>
-                    <li>Кардиостимулятор</li>
+                    <li>❌ Возраст до 18 лет (организм растёт и развивается)</li>
+                    <li>❌ Онкологические заболевания</li>
+                    <li>❌ Открытые раны на теле</li>
+                    <li>❌ Металлические импланты (кроме зубных)</li>
+                    <li>❌ Кардиостимулятор</li>
                 </ul>
                 <div class="contraindications-note">
                     <p>✅ Всем остальным процедуры разрешены и полностью безопасны</p>
@@ -1763,8 +1826,7 @@
 
             <div class="locations-grid">
                 <div class="location-card fade-up">
-                    <!-- Заглушка для фото Москвы -->
-                    <div style="width:100%;height:200px;background:linear-gradient(135deg,#E8F0FE,#D4E4FC);display:flex;align-items:center;justify-content:center;font-size:4rem;">️</div>
+                    <div class="location-card-image" style="background:linear-gradient(135deg,#E8F0FE,#D4E4FC);">🏙️</div>
                     <div class="location-card-body">
                         <h3>📍 Москва</h3>
                         <p>Демонстрационная студия Smart Body Master. Пробные процедуры, консультации, обучение.</p>
@@ -1772,8 +1834,7 @@
                     </div>
                 </div>
                 <div class="location-card fade-up">
-                    <!-- Заглушка для фото Крыма -->
-                    <div style="width:100%;height:200px;background:linear-gradient(135deg,#E8F8F5,#D1F2EB);display:flex;align-items:center;justify-content:center;font-size:4rem;">🏖️</div>
+                    <div class="location-card-image" style="background:linear-gradient(135deg,#E8F8F5,#D1F2EB);">🏖️</div>
                     <div class="location-card-body">
                         <h3>📍 Крым</h3>
                         <p>Демонстрационная студия Smart Body Master. Испытайте результат на собственном опыте.</p>
@@ -1846,13 +1907,20 @@
         </div>
     </footer>
 
+    <!-- ===== МОДАЛЬНОЕ ОКНО ВИДЕО ===== -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-modal-close">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="videoIframe" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== ПЛАВАЮЩАЯ КНОПКА TELEGRAM ===== -->
     <a href="https://t.me/WinnRusso" class="floating-tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.75 3.98-1.73 6.64-2.88 7.97-3.44 3.8-1.58 4.59-1.86 5.1-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.01.06.01.24 0 .38z"/></svg>
     </a>
-
-    <!-- ===== СКРИПТ ВИДЕО KINESCOPE ===== -->
-    <script src="https://kinescope.io/x76Hyyd7VEexGvzLGzURoF/popup.js?aspect_ratio=16/9"></script>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -1880,11 +1948,9 @@
 
         // Табы программ
         function switchTab(tab) {
-            // Убираем active у всех табов и контентов
             document.querySelectorAll('.programs-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.programs-content').forEach(c => c.classList.remove('active'));
 
-            // Добавляем active нужному табу
             if (tab === 'body') {
                 document.querySelector('.programs-tab:first-child').classList.add('active');
                 document.getElementById('body-programs').classList.add('active');
@@ -1896,12 +1962,7 @@
 
         // Анимация при скролле (Intersection Observer)
         const fadeElements = document.querySelectorAll('.fade-up');
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1910,21 +1971,48 @@
                 }
             });
         }, observerOptions);
-
         fadeElements.forEach(el => observer.observe(el));
 
         // Плавный скролл для якорных ссылок
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if(mobileMenu.classList.contains('open')) closeMobile();
                 }
             });
+        });
+
+        // Логика модального окна видео
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('videoIframe');
+        const closeBtn = document.querySelector('.video-modal-close');
+        const videoUrl = 'https://kinescope.io/embed/x76Hyyd7VEexGvzLGzURoF?autoplay=1';
+
+        // Открыть видео
+        document.querySelectorAll('.open-video-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                iframe.src = videoUrl;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Закрыть видео
+        function closeVideo() {
+            modal.classList.remove('active');
+            iframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeVideo);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeVideo();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeVideo();
         });
     </script>
 </body>
