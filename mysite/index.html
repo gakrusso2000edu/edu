@@ -1,1 +1,1822 @@
-ww
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- ========== META & SEO ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна Успешная — Инвестиционный консалтинг | 10 лет опыта</title>
+    <meta name="description" content="Системный подход к вашим инвестициям. Бесплатный созвон 30 минут. Определим ваши финансовые показатели и построим стратегию. 10 лет практики.">
+    <meta name="keywords" content="инвестиции, финансовый консультант, инвестиционный портфель, финансовая стратегия, управление капиталом">
+    <meta name="author" content="Анна Успешная">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Анна Успешная — Инвестиционный консалтинг">
+    <meta property="og:description" content="Системный подход к вашим инвестициям. 10 лет практики. Первый созвон бесплатно.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Favicon - SVG иконка -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231B3A5C'/><text x='50' y='68' text-anchor='middle' fill='%23D4A84B' font-size='55' font-family='serif' font-weight='bold'>АУ</text></svg>">
+
+    <!-- Шрифт Inter через fontsource CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.1.1/index.min.css">
+
+    <style>
+        /* ========== CSS VARIABLES (СВЕТЛАЯ ТЕМА) ========== */
+        :root {
+            --bg-primary: #FAFAFA;
+            --bg-secondary: #FFFFFF;
+            --bg-tertiary: #F0F2F5;
+            --bg-accent: #1B3A5C;
+            --bg-accent-hover: #15304F;
+            --text-primary: #1A1A2E;
+            --text-secondary: #4A4A5A;
+            --text-muted: #6B7280;
+            --text-on-accent: #FFFFFF;
+            --border-color: #E2E5EA;
+            --gold-accent: #C9982E;
+            --gold-light: #F5EDDA;
+            --card-shadow: 0 2px 16px rgba(27, 58, 92, 0.08);
+            --card-shadow-hover: 0 8px 32px rgba(27, 58, 92, 0.14);
+            --transition: 0.3s ease;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --max-width: 1200px;
+            --header-height: 72px;
+        }
+
+        /* ========== CSS VARIABLES (ТЕМНАЯ ТЕМА) ========== */
+        [data-theme="dark"] {
+            --bg-primary: #0F1117;
+            --bg-secondary: #1A1D27;
+            --bg-tertiary: #232632;
+            --bg-accent: #C9982E;
+            --bg-accent-hover: #B8891F;
+            --text-primary: #EAEAEF;
+            --text-secondary: #A8A8B8;
+            --text-muted: #7A7A8E;
+            --text-on-accent: #0F1117;
+            --border-color: #2E3140;
+            --gold-accent: #D4A84B;
+            --gold-light: #2A2518;
+            --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+            --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            transition: background-color var(--transition), color var(--transition);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
+        h2 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+        h3 { font-size: 1.3rem; font-weight: 600; line-height: 1.35; }
+        p { font-size: 1.05rem; color: var(--text-secondary); }
+        .section-subtitle { font-size: 1.15rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title p {
+            max-width: 680px;
+            margin: 0.5rem auto 0;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 36px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .btn-primary {
+            background-color: var(--bg-accent);
+            color: var(--text-on-accent);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--bg-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(27, 58, 92, 0.25);
+        }
+
+        [data-theme="dark"] .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(201, 152, 46, 0.25);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--bg-accent);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--bg-accent);
+            background-color: var(--bg-tertiary);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* ========== БЛОК 1: HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: background-color var(--transition), box-shadow var(--transition);
+        }
+
+        .header.scrolled {
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .header-logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .header-logo span {
+            color: var(--gold-accent);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold-accent);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: var(--bg-tertiary);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all var(--transition);
+            flex-shrink: 0;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border-color);
+        }
+
+        /* Mobile Burger */
+        .burger {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px;
+        }
+
+        .burger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-primary);
+            transition: all var(--transition);
+            border-radius: 2px;
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ========== БЛОК 2: HERO ========== */
+        .hero {
+            padding-top: calc(var(--header-height) + 80px);
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--gold-accent) 0%, transparent 70%);
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--gold-light);
+            color: var(--gold-accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 100px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--bg-accent);
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* ========== БЛОК 3: ОБО МНЕ ========== */
+        .about {
+            background-color: var(--bg-secondary);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--border-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .about-image-placeholder svg {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 16px;
+            opacity: 0.3;
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-image-badge-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .about-image-badge-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .about-image-badge-text span {
+            display: block;
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text > p {
+            margin-bottom: 16px;
+        }
+
+        .about-principles {
+            list-style: none;
+            margin: 24px 0 32px;
+        }
+
+        .about-principles li {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .about-principles li:last-child {
+            border-bottom: none;
+        }
+
+        .about-principles li::before {
+            content: '✦';
+            color: var(--gold-accent);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        /* ========== БЛОК 4: КАК РАБОТАЕМ ========== */
+        .process {
+            background-color: var(--bg-primary);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 48px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold-accent), var(--border-color));
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--bg-accent);
+            color: var(--text-on-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            border: 4px solid var(--bg-primary);
+            box-shadow: var(--card-shadow);
+        }
+
+        .process-step h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+        }
+
+        /* ========== БЛОК 5: ЧТО ПОЛУЧИТЕ ========== */
+        .benefits {
+            background-color: var(--bg-secondary);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .benefit-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: all var(--transition);
+        }
+
+        .benefit-card:hover {
+            box-shadow: var(--card-shadow-hover);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-sm);
+            background: var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .benefits-note {
+            background: var(--gold-light);
+            border-left: 4px solid var(--gold-accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 24px 28px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .benefits-note p {
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* ========== БЛОК 6: ОТЗЫВЫ ========== */
+        .reviews {
+            background-color: var(--bg-primary);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .review-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            transition: all var(--transition);
+        }
+
+        .review-card:hover {
+            box-shadow: var(--card-shadow-hover);
+            transform: translateY(-4px);
+        }
+
+        .review-quote {
+            font-size: 2rem;
+            color: var(--gold-accent);
+            line-height: 1;
+            margin-bottom: 12px;
+            font-family: Georgia, serif;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 24px;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--bg-accent), var(--gold-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-on-accent);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .review-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .review-meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .reviews-disclaimer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== БЛОК 7: FAQ ========== */
+        .faq {
+            background-color: var(--bg-secondary);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: left;
+            line-height: 1.4;
+            transition: color var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--gold-accent);
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: transform var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 24px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* ========== БЛОК 8: CTA ФИНАЛЬНЫЙ ========== */
+        .cta-final {
+            background: linear-gradient(135deg, var(--bg-accent) 0%, #0D2240 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .cta-final {
+            background: linear-gradient(135deg, #2A2518 0%, #1A1D27 100%);
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--gold-accent) 0%, transparent 70%);
+            opacity: 0.06;
+        }
+
+        .cta-final .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-final h2 {
+            color: var(--text-on-accent);
+            margin-bottom: 16px;
+        }
+
+        .cta-final p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        [data-theme="dark"] .cta-final p {
+            color: var(--text-secondary);
+        }
+
+        .cta-final .btn-secondary {
+            border-color: rgba(255,255,255,0.3);
+            color: var(--text-on-accent);
+        }
+
+        .cta-final .btn-secondary:hover {
+            border-color: var(--gold-accent);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* ========== БЛОК 9: FOOTER ========== */
+        .footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--gold-accent);
+            color: white;
+        }
+
+        .footer-column h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: color var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-contact-item span:first-child {
+            font-size: 1rem;
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal a {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            transition: color var(--transition);
+        }
+
+        .footer-legal a:hover {
+            color: var(--gold-accent);
+        }
+
+        /* ========== POPUP ========== */
+        .popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .popup {
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            max-width: 480px;
+            width: 100%;
+            padding: 48px 40px;
+            position: relative;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .popup-overlay.active .popup {
+            transform: translateY(0);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: var(--bg-tertiary);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: all var(--transition);
+        }
+
+        .popup-close:hover {
+            background: var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .popup h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .popup > p {
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+
+        .popup-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .popup-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .popup-link:hover {
+            border-color: var(--gold-accent);
+            background: var(--gold-light);
+        }
+
+        .popup-link-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .popup-link-icon.tg { background: #E3F2FD; }
+        .popup-link-icon.vk { background: #E3F2FD; }
+        .popup-link-icon.wa { background: #E8F5E9; }
+        .popup-link-icon.max { background: #FFF3E0; }
+
+        .popup-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== SCROLL TO TOP ========== */
+        .scroll-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-accent);
+            color: var(--text-on-accent);
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--card-shadow);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition);
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-4px);
+        }
+
+        /* ========== RESPONSIVE - TABLET ========== */
+        @media (max-width: 1024px) {
+            html { font-size: 17px; }
+
+            h1 { font-size: 2.4rem; }
+            h2 { font-size: 1.9rem; }
+
+            .about-grid {
+                gap: 40px;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ========== RESPONSIVE - MOBILE ========== */
+        @media (max-width: 768px) {
+            html { font-size: 16px; }
+            section { padding: 70px 0; }
+
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .section-title { margin-bottom: 40px; }
+
+            /* Header mobile */
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .nav {
+                gap: 12px;
+            }
+
+            /* Hero mobile */
+            .hero {
+                padding-top: calc(var(--header-height) + 50px);
+                padding-bottom: 60px;
+            }
+
+            .hero-stats {
+                gap: 32px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 340px;
+            }
+
+            /* About mobile */
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .about-image {
+                aspect-ratio: 16/10;
+            }
+
+            /* Process mobile */
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            /* Benefits mobile */
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Reviews mobile */
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Footer mobile */
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-legal {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            /* Popup mobile */
+            .popup {
+                padding: 36px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html { font-size: 15px; }
+            h1 { font-size: 1.7rem; }
+            h2 { font-size: 1.4rem; }
+            .container { padding: 0 16px; }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 1: HEADER — Шапка с навигацией и переключателем темы     -->
+    <!-- ============================================================ -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="header-logo">Анна <span>Успешная</span></a>
+            <nav class="nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#process">Как работаем</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#faq">Вопросы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">☀️</button>
+                <button class="burger" id="burger" aria-label="Открыть меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 2: HERO — Главный экран с заголовком и CTA              -->
+    <!-- ============================================================ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">✦ 10 лет в инвестициях</div>
+                <h1>Системный подход к вашим инвестициям. Понятные результаты.</h1>
+                <p>Помогаю выстроить финансовую стратегию, избежать типичных ошибок и начать управлять капиталом осознанно. Первый созвон — 30 минут бесплатно.</p>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="openPopup()">Забронировать бесплатный созвон</button>
+                    <button class="btn btn-secondary" onclick="openPopup()">Подробнее об услуге</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">10+</div>
+                        <div class="hero-stat-label">Лет опыта</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">150+</div>
+                        <div class="hero-stat-label">Клиентов</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">30 мин</div>
+                        <div class="hero-stat-label">Бесплатный созвон</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 3: ОБО МНЕ — Информация об эксперте                     -->
+    <!-- ============================================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-up">
+                    <div class="about-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="35" r="20" fill="currentColor" opacity="0.2"/>
+                            <ellipse cx="50" cy="85" rx="35" ry="25" fill="currentColor" opacity="0.2"/>
+                        </svg>
+                        <p style="font-size:0.85rem;">Фото Анны</p>
+                    </div>
+                    <div class="about-image-badge">
+                        <div class="about-image-badge-icon">✓</div>
+                        <div class="about-image-badge-text">Сертифицированный консультант<span>10 лет практики</span></div>
+                    </div>
+                </div>
+                <div class="about-text fade-up">
+                    <h2>Кто я и почему мне доверяют</h2>
+                    <p>Меня зовут Анна Успешная. Мне 40 лет, и уже 10 лет я работаю в сфере инвестиций и финансового консалтинга. За это время я помогла десяткам клиентов структурировать доходы, сформировать инвестиционные портфели под их цели и избежать эмоциональных решений на рынке.</p>
+                    <p>Мой подход строится на трёх принципах:</p>
+                    <ul class="about-principles">
+                        <li>Цифры важнее эмоций. Мы работаем только с измеримыми показателями.</li>
+                        <li>Прозрачность на каждом этапе. Никаких скрытых комиссий и «волшебных стратегий».</li>
+                        <li>Индивидуальность. Готовые шаблоны не работают. Ваш капитал, ваши сроки, ваши правила.</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openPopup()">Подробнее о моём опыте</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 4: КАК РАБОТАЕМ — Этапы взаимодействия                  -->
+    <!-- ============================================================ -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Как строится наше взаимодействие</h2>
+                <p class="section-subtitle">Чёткий процесс от первого знакомства до результата</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step fade-up">
+                    <div class="process-step-number">1</div>
+                    <h3>Бесплатный созвон</h3>
+                    <p>Знакомство, экспресс-аудит текущих финансов, определение целей. 30 минут бесплатно.</p>
+                </div>
+                <div class="process-step fade-up">
+                    <div class="process-step-number">2</div>
+                    <h3>Глубинное собеседование</h3>
+                    <p>Детальный анализ показателей, рисков, опыта и ожиданий.</p>
+                </div>
+                <div class="process-step fade-up">
+                    <div class="process-step-number">3</div>
+                    <h3>Персональное предложение</h3>
+                    <p>Формирую условия и стоимость, которые соответствуют вашей ситуации.</p>
+                </div>
+                <div class="process-step fade-up">
+                    <div class="process-step-number">4</div>
+                    <h3>Стратегия и сопровождение</h3>
+                    <p>Пошаговый план, регулярные созвоны, корректировка портфеля.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:48px;" class="fade-up">
+                <button class="btn btn-secondary" onclick="openPopup()">Подробнее о формате работы</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 5: ЧТО ПОЛУЧИТЕ — Результаты бесплатного созвона        -->
+    <!-- ============================================================ -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Что мы определим на бесплатном созвоне</h2>
+                <p class="section-subtitle">На первых 30 минутах мы не продаём услуги — мы проводим диагностику</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-up">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Финансовые показатели</h3>
+                    <p>Соотношение ваших текущих активов, пассивов и свободного капитала.</p>
+                </div>
+                <div class="benefit-card fade-up">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Инвестиционный профиль</h3>
+                    <p>Определим ваш профиль: консервативный, сбалансированный или агрессивный.</p>
+                </div>
+                <div class="benefit-card fade-up">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>Точки утечки средств</h3>
+                    <p>Выявим неиспользованные финансовые возможности и скрытые риски.</p>
+                </div>
+                <div class="benefit-card fade-up">
+                    <div class="benefit-icon">📅</div>
+                    <h3>Реалистичный горизонт</h3>
+                    <p>Составим понятный план достижения ваших целей с конкретными сроками.</p>
+                </div>
+            </div>
+            <div class="benefits-note fade-up">
+                <p>После собеседования вы получите прозрачную стоимость дальнейшего сопровождения и чёткий план действий. Стоимость назначается только после того, как мы поймём объём и сложность вашей задачи.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 6: ОТЗЫВЫ — 6 отзывов клиентов                          -->
+    <!-- ============================================================ -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Истории тех, кто уже выстроил свою стратегию</h2>
+                <p class="section-subtitle">Реальные результаты без обещаний «быстрого обогащения». Только цифры, план и прозрачные условия.</p>
+            </div>
+            <div class="reviews-grid">
+                <!-- Отзыв 1 -->
+                <div class="review-card fade-up">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">До встречи с Анной мои деньги работали хаотично. На бесплатном созвоне мы разобрали финансовые показатели и поняли, куда утекает ликвидность. После собеседования Анна предложила прозрачную стоимость и чёткий план. За полгода сформировали диверсифицированный портфель.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">ДВ</div>
+                        <div>
+                            <div class="review-name">Дмитрий Волков</div>
+                            <div class="review-meta">Владелец стоматологической клиники · Екатеринбург</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 2 -->
+                <div class="review-card fade-up">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Как бухгалтер, я ценю точность и отсутствие «воды». Анна подошла к моим финансам именно так: цифры, метрики, чёткие горизонты. Стоимость услуг стала понятна после собеседования — не навешивали лишнее. Теперь у меня есть стратегия на пенсию и образование детей.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">ЕС</div>
+                        <div>
+                            <div class="review-name">Елена Соколова</div>
+                            <div class="review-meta">Главный бухгалтер · Москва</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 3 -->
+                <div class="review-card fade-up">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Зарабатывал хорошо, но не понимал, как сохранить. Первый бесплатный созвон занял ровно 30 минут, но мы уже определили ключевые показатели и риски. После собеседования получил персональное предложение без скрытых условий. Никакой магии, только расчёт и дисциплина.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">ИП</div>
+                        <div>
+                            <div class="review-name">Игорь Петров</div>
+                            <div class="review-meta">IT-архитектор · Санкт-Петербург</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 4 -->
+                <div class="review-card fade-up">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Раньше инвестировала по советам из интернета. Анна помогла выстроить систему с первого созвона. Мы чётко определили мои финансовые показатели и допустимые риски. Стоимость назвали после собеседования — это сняло все сомнения. За 4 месяца начала следовать плану.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">МЛ</div>
+                        <div>
+                            <div class="review-name">Мария Лебедева</div>
+                            <div class="review-meta">Врач-дерматолог · Казань</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 5 -->
+                <div class="review-card fade-up">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Бесплатные 30 минут дали мне полную картину: где я сейчас, куда могу прийти и какие инструменты подходят. После собеседования озвучили стоимость, которая полностью соответствовала объёму работы. Никаких обещаний «сверхдоходов» — только реалистичные сценарии.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">АК</div>
+                        <div>
+                            <div class="review-name">Андрей Козлов</div>
+                            <div class="review-meta">Управляющий в логистике · Новосибирск</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Отзыв 6 -->
+                <div class="review-card fade-up">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">В бизнесе я привыкла всё контролировать, но личные финансы были в хаосе. Анна помогла отделить личное от рабочего и выстроить инвестиционную подушку. На бесплатном созвоне определили ключевые показатели. Сейчас у меня чёткая стратегия и регулярные отчёты.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">ОИ</div>
+                        <div>
+                            <div class="review-name">Ольга Иванова</div>
+                            <div class="review-meta">Предприниматель · Краснодар</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="reviews-disclaimer">*Результаты индивидуальны и зависят от стартовых условий, дисциплины следования стратегии и рыночной конъюнктуры.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 7: FAQ — Частые вопросы с аккордеоном                   -->
+    <!-- ============================================================ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Частые вопросы</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item fade-up">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Почему стоимость указывается только после собеседования?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Инвестиции — не товар на полке. Мои условия зависят от сложности вашей ситуации, объёма капитала, целей и формата сопровождения. Собеседование позволяет дать честную оценку и назвать цену, которая соответствует реальной работе.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-up">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Что входит в бесплатный 30-минутный созвон?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Знакомство, базовый разбор ваших финансовых показателей, определение целей и понимание, подходим ли мы друг другу. Это диагностика, а не продажа.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-up">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Как проходит собеседование?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Это структурированная онлайн-встреча (40–60 мин), где мы подробно разбираем вашу текущую ситуацию, риски, опыт и ожидания. На основе этого я формирую персональное предложение с фиксированной стоимостью.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-up">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Нужен ли большой капитал для начала работы?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Нет. Я работаю с клиентами на разных этапах формирования капитала. Важнее системный подход и дисциплина, чем стартовая сумма. На бесплатном созвоне мы определим ваш текущий уровень и точки роста.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-up">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Даёте ли вы гарантии дохода?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Нет, и это принципиальная позиция. Никто не может гарантировать доход на финансовом рынке. Я даю гарантию другого рода: прозрачную стратегию, регулярный контроль и честные условия сотрудничества.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:48px;" class="fade-up">
+                <button class="btn btn-primary" onclick="openPopup()">Остались вопросы? Напишите мне</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 8: CTA ФИНАЛЬНЫЙ — Призыв к действию                   -->
+    <!-- ============================================================ -->
+    <section class="cta-final" id="contact">
+        <div class="container">
+            <h2>Готовы взять финансы под контроль?</h2>
+            <p>Запишитесь на бесплатный 30-минутный созвон. Мы определим ваши финансовые показатели, обсудим цели и решим, как двигаться дальше без спешки и лишних рисков.</p>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="openPopup()">Записаться на бесплатный созвон</button>
+                <button class="btn btn-secondary" onclick="openPopup()">Подробнее о сотрудничестве</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- БЛОК 9: FOOTER — Подвал с контактами и юридическими ссылками -->
+    <!-- ============================================================ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Анна <span style="color:var(--gold-accent)">Успешная</span></h3>
+                    <p>Инвестиционный консалтинг. 10 лет практики, системный подход и прозрачные условия для каждого клиента.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Telegram" onclick="openPopup()">✈️</a>
+                        <a href="#" aria-label="ВКонтакте" onclick="openPopup()">💬</a>
+                        <a href="#" aria-label="WhatsApp" onclick="openPopup()">📱</a>
+                        <a href="#" aria-label="Макс" onclick="openPopup()">⭐</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#about">Обо мне</a></li>
+                        <li><a href="#process">Как работаем</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#faq">Вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="/offer">Публичная оферта</a></li>
+                        <li><a href="/consent">Согласие на обработку данных</a></li>
+                        <li><a href="/agreement">Пользовательское соглашение</a></li>
+                        <li><a href="/rules">Правила сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <div class="footer-contact-item">
+                        <span>📧</span>
+                        <a href="mailto:anna@example.com">anna@example.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>📞</span>
+                        <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>📍</span>
+                        <span>Онлайн · Вся Россия</span>
+                    </div>
+                    <button class="btn btn-primary" style="width:100%;margin-top:12px;padding:12px 24px;font-size:0.9rem;" onclick="openPopup()">Присоединиться в мессенджеры</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© Анна Успешная, 2026. Все права защищены. Материалы сайта носят информационный характер и не являются индивидуальной инвестиционной рекомендацией.</p>
+                <div class="footer-legal">
+                    <a href="/offer">Оферта</a>
+                    <a href="/consent">Согласие на обработку данных</a>
+                    <a href="/agreement">Пользовательское соглашение</a>
+                    <a href="/rules">Правила сайта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- ВСПЛЫВАЮЩЕЕ ОКНО — Popup с мессенджерами                     -->
+    <!-- ============================================================ -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopup(event)">
+        <div class="popup" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopupDirect()" aria-label="Закрыть">✕</button>
+            <h3>Присоединиться к каналу</h3>
+            <p>Подпишитесь на мой закрытый канал с еженедельными разборами рынков, финансовыми лайфхаками и кейсами клиентов. Или напишите напрямую, чтобы записаться на бесплатный созвон.</p>
+            <div class="popup-links">
+                <a href="https://t.me/" class="popup-link" target="_blank" rel="noopener">
+                    <div class="popup-link-icon tg">✈️</div>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://vk.com/" class="popup-link" target="_blank" rel="noopener">
+                    <div class="popup-link-icon vk">💬</div>
+                    <span>ВКонтакте</span>
+                </a>
+                <a href="https://wa.me/" class="popup-link" target="_blank" rel="noopener">
+                    <div class="popup-link-icon wa">📱</div>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" class="popup-link" target="_blank" rel="noopener">
+                    <div class="popup-link-icon max">⭐</div>
+                    <span>Макс</span>
+                </a>
+            </div>
+            <p class="popup-note">Нажмите на нужный мессенджер, чтобы перейти в чат</p>
+        </div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script>
+        /* ========== ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ ========== */
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Проверка сохранённой темы
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+                html.removeAttribute('data-theme');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        /* ========== МОБИЛЬНОЕ МЕНЮ ========== */
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Закрытие при клике на ссылку
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        /* ========== POPUP ========== */
+        const popupOverlay = document.getElementById('popupOverlay');
+
+        function openPopup() {
+            popupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup(e) {
+            if (e.target === popupOverlay) {
+                closePopupDirect();
+            }
+        }
+
+        function closePopupDirect() {
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Закрытие по Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePopupDirect();
+        });
+
+        /* ========== FAQ АККОРДЕОН ========== */
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+
+            // Закрыть все
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Открыть текущий (если был закрыт)
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        /* ========== HEADER SCROLL EFFECT ========== */
+        const header = document.getElementById('header');
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Кнопка "Наверх"
+            if (window.scrollY > 600) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        /* ========== АНИМАЦИЯ ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ ========== */
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- ============================================================ -->
+    <!-- АНАЛИТИКА: Метрики и пиксели (заглушки — вставьте свои ID)  -->
+    <!-- ============================================================ -->
+
+    <!-- Yandex.Metrika counter -->
+    <!--
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t);a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(XXXXXXXX, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    -->
+
+    <!-- VK Pixel -->
+    <!--
+    <script type="text/javascript">
+       !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://vk.com/js/api/openapi.js?162',t.onload=function(){VK.Retargeting.Init("VK-RTRG-XXXXXXXXX"),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+    </script>
+    <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-XXXXXXXXX" style="position:fixed; left:-999px;" alt=""/></noscript>
+    -->
+
+    <!-- Google Analytics 4 -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+</body>
+</html>
+
+
