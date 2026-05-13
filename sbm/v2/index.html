@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Мета-теги SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Body Master — Итальянская технология коррекции фигуры | Гарантия результата после первой процедуры</title>
+    <meta name="description" content="Smart Body Master — итальянский аппарат для неинвазивной коррекции фигуры. Минус 2-5 см объёмов за 45 минут без диет и хирургии. Ультразвук + электростимуляция + лимфодренаж.">
+    <meta name="keywords" content="Smart Body Master, коррекция фигуры, ультразвук, электростимуляция, лимфодренаж, итальянское оборудование, неинвазивная липосакция">
+    
+    <!-- Фавикон -->
+    <link rel="icon" type="image/png" href="https://sbm.studio/images/Header_Footer/logo.png">
+    
+    <style>
+        /* ===== БАЗОВЫЕ СТИЛИ ===== */
+        :root {
+            /* Цвета бренда SBM */
+            --primary: #0044AA;
+            --primary-dark: #003388;
+            --primary-light: #E6F0FF;
+            --accent: #FF6B35;
+            --accent-dark: #E55A2B;
+            --accent-light: #FFF0E6;
+            --text: #1A1A2E;
+            --text-light: #5A6B8C;
+            --bg: #FFFFFF;
+            --bg-alt: #F8FAFD;
+            --border: #DDE6F2;
+            --shadow: 0 4px 24px rgba(0,68,170,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,68,170,0.15);
+            --radius: 16px;
+            --radius-sm: 12px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== ТИПОГРАФИКА ===== */
+        h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+        h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 600; line-height: 1.3; }
+        p { color: var(--text-light); font-size: 1.05rem; }
+        .section-title { text-align: center; margin-bottom: 16px; }
+        .section-subtitle { text-align: center; max-width: 680px; margin: 0 auto 48px; font-size: 1.1rem; }
+        .highlight { color: var(--primary); }
+        .accent { color: var(--accent); }
+
+        /* ===== КНОПКИ ===== */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 16px 32px; border-radius: 50px; font-size: 1rem; font-weight: 600;
+            cursor: pointer; border: none; transition: var(--transition); text-align: center;
+        }
+        .btn-primary {
+            background: var(--primary); color: white;
+            box-shadow: 0 4px 16px rgba(0,68,170,0.3);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark); transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0,68,170,0.4);
+        }
+        .btn-accent {
+            background: var(--accent); color: white;
+            box-shadow: 0 4px 16px rgba(255,107,53,0.3);
+        }
+        .btn-accent:hover {
+            background: var(--accent-dark); transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(255,107,53,0.4);
+        }
+        .btn-outline {
+            background: transparent; color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        .btn-lg { padding: 18px 40px; font-size: 1.1rem; }
+        .btn-sm { padding: 12px 24px; font-size: 0.9rem; }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border); transition: var(--transition);
+        }
+        .navbar.scrolled { box-shadow: var(--shadow); }
+        .navbar .container {
+            display: flex; align-items: center; justify-content: space-between; height: 72px;
+        }
+        .navbar-logo {
+            display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.1rem; color: var(--primary);
+        }
+        .navbar-logo img { height: 40px; }
+        .navbar-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .navbar-links a {
+            font-size: 0.95rem; font-weight: 500; color: var(--text-light); transition: var(--transition);
+        }
+        .navbar-links a:hover { color: var(--primary); }
+        .navbar-cta { padding: 10px 24px; }
+        .navbar-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .navbar-toggle span {
+            display: block; width: 24px; height: 2px; background: var(--text);
+            margin: 6px 0; transition: var(--transition);
+        }
+
+        /* ===== HERO СЕКЦИЯ ===== */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--primary-light) 50%, var(--bg) 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,68,170,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 16px; background: var(--primary-light); border-radius: 50px;
+            font-size: 0.85rem; font-weight: 600; color: var(--primary); margin-bottom: 24px;
+        }
+        .hero h1 { margin-bottom: 20px; }
+        .hero-text { font-size: 1.15rem; margin-bottom: 32px; max-width: 520px; }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+        .hero-stats { display: flex; gap: 40px; }
+        .hero-stat { text-align: center; }
+        .hero-stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .hero-stat-label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+        .hero-visual { position: relative; }
+        .hero-image { border-radius: var(--radius); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover; }
+        .hero-video-trigger {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 80px; height: 80px; background: rgba(255,255,255,0.95); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; cursor: pointer;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15); transition: var(--transition); z-index: 3;
+        }
+        .hero-video-trigger:hover { transform: translate(-50%, -50%) scale(1.1); }
+        .hero-video-trigger svg { width: 28px; height: 28px; fill: var(--primary); margin-left: 4px; }
+
+        /* ===== СЕКЦИИ ОБЩИЕ ===== */
+        .section { padding: 100px 0; }
+        .section-alt { background: var(--bg-alt); }
+        .section-dark {
+            background: linear-gradient(135deg, #0A1628 0%, #1A2744 100%); color: white;
+        }
+        .section-dark .section-title, .section-dark .section-subtitle { color: white; }
+        .section-dark .section-subtitle { color: rgba(255,255,255,0.7); }
+
+        /* ===== ПРОБЛЕМЫ ===== */
+        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px; }
+        .problem-card {
+            background: var(--bg-alt); padding: 32px; border-radius: var(--radius);
+            border: 1px solid var(--border); transition: var(--transition);
+        }
+        .problem-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .problem-icon {
+            width: 48px; height: 48px; background: #FEE2E2; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.4rem;
+        }
+        .problem-card h3 { margin-bottom: 8px; font-size: 1.1rem; }
+        .problem-card p { font-size: 0.95rem; }
+
+        /* ===== РЕШЕНИЕ ===== */
+        .solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .solution-image { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+        .solution-features { display: flex; flex-direction: column; gap: 20px; }
+        .solution-feature { display: flex; gap: 16px; align-items: flex-start; }
+        .solution-feature-icon {
+            width: 44px; height: 44px; min-width: 44px; background: var(--primary-light);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+        }
+        .solution-feature h4 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+        .solution-feature p { font-size: 0.9rem; }
+
+        /* ===== КАК РАБОТАЕТ ===== */
+        .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .step { text-align: center; position: relative; }
+        .step::after {
+            content: ''; position: absolute; top: 40px; right: -16px;
+            width: 32px; height: 2px; background: var(--border);
+        }
+        .step:last-child::after { display: none; }
+        .step-number {
+            width: 56px; height: 56px; background: var(--primary); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; font-weight: 700; margin: 0 auto 20px;
+        }
+        .step h3 { margin-bottom: 8px; font-size: 1.05rem; }
+        .step p { font-size: 0.9rem; }
+        .step-time {
+            display: inline-block; padding: 4px 12px; background: var(--accent);
+            color: white; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-top: 12px;
+        }
+
+        /* ===== РЕЗУЛЬТАТЫ ===== */
+        .results-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .results-image { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+        .results-guarantee {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white; padding: 40px; border-radius: var(--radius); margin-top: 32px;
+        }
+        .results-guarantee h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .results-guarantee p { color: rgba(255,255,255,0.85); font-size: 1rem; }
+        .results-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+        .result-stat {
+            background: white; padding: 24px; border-radius: var(--radius-sm);
+            text-align: center; box-shadow: var(--shadow);
+        }
+        .result-stat-number { font-size: 2.2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .result-stat-label { font-size: 0.85rem; color: var(--text-light); margin-top: 8px; }
+
+        /* ===== КОМПЛЕКТАЦИЯ ===== */
+        .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .kit-item {
+            background: var(--bg-alt); padding: 28px; border-radius: var(--radius);
+            border: 1px solid var(--border); text-align: center; transition: var(--transition);
+        }
+        .kit-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .kit-item-icon {
+            width: 64px; height: 64px; background: var(--primary-light); border-radius: 16px;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.6rem;
+        }
+        .kit-item h3 { font-size: 1rem; margin-bottom: 8px; }
+        .kit-item p { font-size: 0.9rem; }
+
+        /* ===== БИЗНЕС ===== */
+        .business-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
+        .business-card {
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+            padding: 36px; border-radius: var(--radius); text-align: center;
+            backdrop-filter: blur(10px); transition: var(--transition);
+        }
+        .business-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+        .business-card-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .business-card h3 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; color: var(--accent); }
+        .business-card p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+        .business-table {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius); overflow: hidden; margin-bottom: 24px;
+        }
+        .business-table-header {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+            background: rgba(255,255,255,0.08); padding: 16px 24px; font-weight: 700; font-size: 0.9rem;
+        }
+        .business-table-row {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+            padding: 14px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.9rem;
+        }
+        .business-table-row:last-child { border-bottom: none; }
+        .business-table-row span:first-child { color: rgba(255,255,255,0.7); }
+        .business-table-row span { text-align: right; font-weight: 600; }
+        .business-table-row.total { background: rgba(0,201,167,0.15); }
+        .business-table-row.total span:last-child { color: var(--accent); font-size: 1.1rem; }
+        .business-note {
+            background: rgba(255,255,255,0.08); padding: 20px; border-radius: var(--radius-sm);
+            text-align: center; font-size: 0.95rem; color: rgba(255,255,255,0.85);
+        }
+
+        /* ===== ЭКСКЛЮЗИВНОСТЬ ===== */
+        .exclusivity {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg) 100%);
+            border-left: 4px solid var(--accent); border-right: 4px solid var(--accent);
+        }
+        .exclusivity-content {
+            display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+        }
+        .exclusivity-text h3 { margin-bottom: 12px; }
+        .exclusivity-text p { margin-bottom: 20px; }
+        .exclusivity-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+        .exclusivity-badge {
+            display: flex; align-items: center; gap: 8px; padding: 8px 16px;
+            background: white; border-radius: 50px; font-size: 0.9rem; font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+
+        /* ===== БИЗНЕС ВДОХНОВЛЯЕТ ===== */
+        .inspire-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .inspire-quote {
+            background: var(--primary-light); padding: 24px; border-radius: var(--radius-sm);
+            border-left: 4px solid var(--primary); font-style: italic; margin: 20px 0;
+        }
+        .inspire-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .inspire-item { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+        .inspire-item::before {
+            content: '✓'; width: 20px; height: 20px; background: var(--accent);
+            color: white; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
+        }
+
+        /* ===== 5 КЛЮЧЕЙ ===== */
+        .keys-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+        .key-card {
+            background: var(--bg-alt); padding: 28px; border-radius: var(--radius);
+            border-top: 4px solid var(--primary); transition: var(--transition);
+        }
+        .key-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .key-card h3 { font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .key-card p { font-size: 0.9rem; }
+
+        /* ===== ПРОГРАММЫ ===== */
+        .programs-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
+        .programs-tab {
+            padding: 12px 28px; border-radius: 50px; font-size: 0.95rem; font-weight: 600;
+            cursor: pointer; border: 2px solid var(--border); background: white;
+            color: var(--text-light); transition: var(--transition);
+        }
+        .programs-tab.active { border-color: var(--primary); background: var(--primary); color: white; }
+        .programs-content { display: none; }
+        .programs-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .programs-image { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+        .programs-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+        .programs-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--text); }
+        .programs-list li::before {
+            content: '✓'; min-width: 24px; height: 24px; background: var(--accent);
+            color: white; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 0.75rem; font-weight: 700; margin-top: 2px;
+        }
+
+        /* ===== ПРЕИМУЩЕСТВА ===== */
+        .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .advantage-card {
+            background: var(--bg-alt); padding: 32px; border-radius: var(--radius);
+            border-left: 4px solid var(--primary); transition: var(--transition);
+        }
+        .advantage-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .advantage-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .advantage-card p { font-size: 0.95rem; }
+
+        /* ===== СЕКРЕТ ЭФФЕКТИВНОСТИ ===== */
+        .secret-box {
+            background: linear-gradient(135deg, var(--accent-light) 0%, var(--bg-alt) 100%);
+            padding: 32px; border-radius: var(--radius); border: 2px dashed var(--accent);
+            text-align: center; margin: 32px 0;
+        }
+        .secret-box h3 { color: var(--accent-dark); margin-bottom: 12px; }
+        .secret-box p { margin-bottom: 16px; }
+        .secret-highlight {
+            display: inline-block; padding: 4px 12px; background: var(--accent);
+            color: white; border-radius: 50px; font-size: 0.85rem; font-weight: 600;
+        }
+
+        /* ===== ПРОТИВОПОКАЗАНИЯ ===== */
+        .contraindications-wrapper {
+            max-width: 700px; margin: 0 auto; background: white; padding: 40px;
+            border-radius: var(--radius); box-shadow: var(--shadow);
+        }
+        .contraindications-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+        .contraindications-list li { display: flex; gap: 12px; align-items: center; font-size: 1rem; }
+        .contraindications-note {
+            background: var(--primary-light); padding: 20px; border-radius: var(--radius-sm);
+            text-align: center;
+        }
+        .contraindications-note p { color: var(--primary); font-weight: 600; font-size: 1rem; }
+
+        /* ===== ГДЕ ПОПРОБОВАТЬ ===== */
+        .locations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .location-card {
+            background: var(--bg-alt); border-radius: var(--radius); overflow: hidden;
+            border: 1px solid var(--border); transition: var(--transition);
+        }
+        .location-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+        .location-card-image { width: 100%; height: 240px; object-fit: cover; }
+        .location-card-body { padding: 28px; }
+        .location-card h3 { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .location-card p { font-size: 0.95rem; margin-bottom: 16px; }
+
+        /* ===== ГЕОГРАФИЯ ===== */
+        .geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 32px; }
+        .geo-item {
+            background: var(--bg-alt); padding: 24px; border-radius: var(--radius-sm);
+            text-align: center; border: 1px solid var(--border);
+        }
+        .geo-item-flag { font-size: 2rem; margin-bottom: 8px; }
+        .geo-item h4 { font-size: 1rem; margin-bottom: 4px; }
+        .geo-item p { font-size: 0.9rem; }
+        .geo-facts {
+            background: var(--primary-light); padding: 24px; border-radius: var(--radius-sm);
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+        }
+        .geo-fact { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+        .geo-fact::before { content: '✅'; font-size: 1.2rem; }
+
+        /* ===== МОДЕЛИ ОПЛАТЫ ===== */
+        .pricing-table {
+            background: white; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow); margin-bottom: 24px;
+        }
+        .pricing-header {
+            display: grid; grid-template-columns: 2fr 1fr 1fr; background: var(--primary);
+            color: white; padding: 16px 24px; font-weight: 700;
+        }
+        .pricing-row {
+            display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 14px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-row:last-child { border-bottom: none; }
+        .pricing-row.highlight { background: var(--accent-light); font-weight: 600; }
+        .pricing-note {
+            background: var(--bg-alt); padding: 20px; border-radius: var(--radius-sm);
+            text-align: center; margin-bottom: 24px;
+        }
+        .pricing-package {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white; padding: 20px; border-radius: var(--radius-sm); text-align: center;
+        }
+
+        /* ===== ДЛЯ КОГО ===== */
+        .for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .for-who-list { list-style: none; }
+        .for-who-list li {
+            display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; font-size: 1rem;
+        }
+        .for-who-list li::before {
+            content: '✓'; width: 24px; height: 24px; background: var(--accent);
+            color: white; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;
+        }
+        .for-who-not {
+            background: #FEE2E2; padding: 24px; border-radius: var(--radius-sm);
+            border-left: 4px solid #DC2626;
+        }
+        .for-who-not h4 { color: #DC2626; margin-bottom: 12px; }
+        .for-who-not ul { list-style: none; }
+        .for-who-not li { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; font-size: 0.95rem; }
+        .for-who-not li::before { content: '❌'; }
+
+        /* ===== ФИНАЛЬНЫЙ CTA ===== */
+        .final-cta {
+            padding: 100px 0; background: linear-gradient(135deg, var(--primary) 0%, #003388 100%);
+            color: white; text-align: center;
+        }
+        .final-cta h2 { color: white; margin-bottom: 16px; }
+        .final-cta p { color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 32px; font-size: 1.1rem; }
+        .final-cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .final-cta .btn-accent { background: white; color: var(--primary); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+        .final-cta .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+        /* ===== ФУТЕР ===== */
+        .footer { padding: 60px 0 30px; background: var(--text); color: rgba(255,255,255,0.7); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand h3 { color: white; margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        .footer-brand img { height: 36px; }
+        .footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .footer-col h4 { color: white; margin-bottom: 16px; font-size: 1rem; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col a { color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: var(--transition); }
+        .footer-col a:hover { color: white; }
+        .footer-trust {
+            background: rgba(255,255,255,0.04); padding: 20px; border-radius: var(--radius-sm);
+            margin-top: 24px; font-size: 0.9rem;
+        }
+        .footer-trust p { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+            text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.4);
+        }
+
+        /* ===== МОДАЛЬНОЕ ОКНО ВИДЕО ===== */
+        .video-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 9999;
+            align-items: center; justify-content: center; padding: 20px;
+        }
+        .video-modal.active { display: flex; }
+        .video-modal-content {
+            position: relative; width: 100%; max-width: 900px; background: #000;
+            border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+        }
+        .video-modal-close {
+            position: absolute; top: -40px; right: 0; color: white; font-size: 32px;
+            font-weight: bold; cursor: pointer; transition: var(--transition); z-index: 10000;
+        }
+        .video-modal-close:hover { color: var(--accent); transform: rotate(90deg); }
+
+        /* ===== ПЛАВАЮЩАЯ КНОПКА ===== */
+        .floating-tg {
+            position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px;
+            background: #0088cc; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 4px 20px rgba(0,136,204,0.4);
+            z-index: 998; transition: var(--transition); animation: pulse 2s infinite;
+        }
+        .floating-tg:hover { transform: scale(1.1); }
+        .floating-tg svg { width: 28px; height: 28px; fill: white; }
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 20px rgba(0,136,204,0.4); }
+            50% { box-shadow: 0 4px 30px rgba(0,136,204,0.6); }
+            100% { box-shadow: 0 4px 20px rgba(0,136,204,0.4); }
+        }
+
+        /* ===== АНИМАЦИИ ===== */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== МОБИЛЬНАЯ НАВИГАЦИЯ ===== */
+        .mobile-menu {
+            display: none; position: fixed; top: 72px; left: 0; right: 0;
+            background: white; padding: 24px; border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow); z-index: 999;
+        }
+        .mobile-menu.open { display: block; }
+        .mobile-menu a {
+            display: block; padding: 12px 0; font-size: 1rem; font-weight: 500;
+            color: var(--text); border-bottom: 1px solid var(--border);
+        }
+        .mobile-menu a:last-child { border-bottom: none; color: var(--primary); font-weight: 600; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-visual { order: -1; }
+            .hero-content { text-align: center; }
+            .hero-text { margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .solution-grid, .results-content, .programs-content.active, .inspire-grid { grid-template-columns: 1fr; gap: 40px; }
+            .business-cards, .exclusivity-content { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .business-table-header, .business-table-row, .pricing-header, .pricing-row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .navbar-links { display: none; }
+            .navbar-toggle { display: block; }
+            .navbar-cta { display: none; }
+            .steps { grid-template-columns: 1fr; gap: 24px; }
+            .step::after { display: none; }
+            .locations-grid, .for-who-grid { grid-template-columns: 1fr; }
+            .hero-stats { gap: 24px; }
+            .results-stats { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .final-cta-buttons { flex-direction: column; align-items: center; }
+            .business-table-header, .business-table-row, .pricing-header, .pricing-row { padding: 12px 16px; font-size: 0.85rem; }
+            .kit-grid, .advantages-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .hero { padding: 100px 0 60px; }
+            .problems-grid, .kit-grid, .advantages-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; }
+            .video-modal-close { top: -35px; right: 5px; font-size: 28px; }
+            .programs-tabs { flex-direction: column; align-items: center; }
+            .programs-tab { width: 100%; max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== НАВИГАЦИЯ ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar-logo">
+                <img src="https://sbm.studio/images/Header_Footer/logo.png" alt="Smart Body Master">
+            </a>
+            <ul class="navbar-links">
+                <li><a href="#technology">Технология</a></li>
+                <li><a href="#how-it-works">Как работает</a></li>
+                <li><a href="#results">Результаты</a></li>
+                <li><a href="#business">Для бизнеса</a></li>
+                <li><a href="#locations">Где попробовать</a></li>
+            </ul>
+            <a href="https://t.me/WinnRusso" class="btn btn-primary btn-sm navbar-cta" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель</a>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#technology" onclick="closeMobile()">Технология</a>
+        <a href="#how-it-works" onclick="closeMobile()">Как работает</a>
+        <a href="#results" onclick="closeMobile()">Результаты</a>
+        <a href="#business" onclick="closeMobile()">Для бизнеса</a>
+        <a href="#locations" onclick="closeMobile()">Где попробовать</a>
+        <a href="https://t.me/WinnRusso" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель</a>
+    </div>
+
+    <!-- ===== HERO СЕКЦИЯ ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-up">
+                <div class="hero-badge">🇮🇹 Итальянская технология • ~40 лет на рынке</div>
+                <h1>Smart Body Master — <span class="highlight">скульптор умного тела</span></h1>
+                <p class="hero-text">Минус 2–5 см объёмов за 45 минут без диет, уколов и хирургии. Высокочастотный ультразвук + электростимуляция + лимфодренаж в одном аппарате.</p>
+                <div class="hero-buttons">
+                    <a href="https://t.me/WinnRusso" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Записаться на пробную процедуру</a>
+                    <button class="btn btn-outline btn-lg open-video-btn">▶ Смотреть видео</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><div class="hero-stat-number">2-5 см</div><div class="hero-stat-label">после 1 процедуры</div></div>
+                    <div class="hero-stat"><div class="hero-stat-number">45 мин</div><div class="hero-stat-label">длительность</div></div>
+                    <div class="hero-stat"><div class="hero-stat-number">100%</div><div class="hero-stat-label">результат</div></div>
+                </div>
+            </div>
+            <div class="hero-visual fade-up">
+                <img src="https://gakrusso2000edu.github.io/edu/sbm/img/2sbmapparatall.JPG" alt="Smart Body Master" class="hero-image">
+                <div class="hero-video-trigger open-video-btn" aria-label="Смотреть видео"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== СЕКЦИЯ ПРОБЛЕМЫ ===== -->
+    <section class="section" id="problems">
+        <div class="container">
+            <h2 class="section-title fade-up">Устали бороться с лишним весом <span class="highlight">безрезультатно?</span></h2>
+            <p class="section-subtitle fade-up">Большинство методов работают против организма. Smart Body Master работает <strong>вместе</strong> с вашим телом.</p>
+            <div class="problems-grid">
+                <div class="problem-card fade-up"><div class="problem-icon">📉</div><h3>Диеты не работают</h3><p>Вес возвращается, организм сопротивляется</p></div>
+                <div class="problem-card fade-up"><div class="problem-icon">⏰</div><h3>Фитнес отнимает время</h3><p>3-4 тренировки в неделю, результаты незаметны</p></div>
+                <div class="problem-card fade-up"><div class="problem-icon">💉</div><h3>Уколы портят здоровье</h3><p>Препараты наносят серьёзный вред организму</p></div>
+                <div class="problem-card fade-up"><div class="problem-icon">🔪</div><h3>Хирургия — опасно</h3><p>Долгое восстановление и риски для здоровья</p></div>
+                <div class="problem-card fade-up"><div class="problem-icon">😰</div><h3>Кожа обвисает</h3><p>После резкого похудения кожа не подтягивается</p></div>
+                <div class="problem-card fade-up"><div class="problem-icon">💸</div><h3>Деньги на ветер</h3><p>Дорогие процедуры без гарантированного результата</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== СЕКЦИЯ РЕШЕНИЯ ===== -->
+    <section class="section section-alt" id="technology">
+        <div class="container">
+            <div class="solution-grid">
+                <div class="fade-up"><img src="https://gakrusso2000edu.github.io/edu/sbm/img/1sbmapparat.png" alt="Smart Body Master" class="solution-image"></div>
+                <div class="fade-up">
+                    <h2 style="margin-bottom: 16px;">Итальянская технология, которая <span class="highlight">меняет правила игры</span></h2>
+                    <p style="margin-bottom: 28px;">Smart Body Master — передовой аппарат от итальянской компании <strong>Cesare Quaranta</strong> (~40 лет на рынке). 5 технологий в одной процедуре.</p>
+                    <div class="solution-features">
+                        <div class="solution-feature"><div class="solution-feature-icon">🔊</div><div><h4>Высокочастотный ультразвук</h4><p>Разбивает жировые отложения</p></div></div>
+                        <div class="solution-feature"><div class="solution-feature-icon">⚡</div><div><h4>Электростимуляция до 36 000 имп/мин</h4><p>Сокращает мышцы, восстанавливает тонус</p></div></div>
+                        <div class="solution-feature"><div class="solution-feature-icon">💧</div><div><h4>Лимфодренаж</h4><p>Естественный вывод жира через лимфу</p></div></div>
+                        <div class="solution-feature"><div class="solution-feature-icon">📊</div><div><h4>Биоимпедансный анализ</h4><p>Диагностика за доли секунды</p></div></div>
+                        <div class="solution-feature"><div class="solution-feature-icon">✨</div><div><h4>Подтяжка кожи</h4><p>Кожа не обвисает — подтягивается</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ЭКСКЛЮЗИВНОСТЬ БРЕНДА ===== -->
+    <section class="section exclusivity">
+        <div class="container">
+            <div class="exclusivity-content fade-up">
+                <div class="exclusivity-text">
+                    <h3>🔐 Эксклюзивная технология, созданная специально для SBM</h3>
+                    <p>Smart Body Master — не массовый продукт. Это эксклюзивная разработка, созданная в сотрудничестве специалистов компании SBM, итальянской компании <strong>Cesare Quaranta</strong> (~40 лет на рынке) и европейских производителей эстетического оборудования.</p>
+                    <p>🇮🇹 Итальянское качество, которое выбирают звёзды мирового уровня. Теперь доступно и вам.</p>
+                    <div class="exclusivity-badges">
+                        <span class="exclusivity-badge">🇮🇹 Cesare Quaranta</span>
+                        <span class="exclusivity-badge">🔬 Эксклюзивная разработка</span>
+                        <span class="exclusivity-badge">⭐ Выбор профессионалов</span>
+                    </div>
+                </div>
+                <a href="https://t.me/WinnRusso" class="btn btn-accent btn-lg" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== БИЗНЕС, КОТОРЫЙ ВДОХНОВЛЯЕТ ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="inspire-grid">
+                <div class="fade-up">
+                    <h2 style="margin-bottom: 16px;">💼 Построй бизнес, который приносит не только доход, но и радость</h2>
+                    <p>Предоставляя высококачественные услуги коррекции фигуры, ты становишься частью пути клиентов к совершенству. Их восторженные отзывы и реальные изменения — лучшая награда.</p>
+                    <div class="inspire-quote">«Технологии работают за тебя. Просто подключи аппарат — и на 45 минут ты свободен!»</div>
+                    <div class="inspire-list">
+                        <div class="inspire-item">🤖 Автоматизация процедур</div>
+                        <div class="inspire-item">😊 Довольные клиенты</div>
+                        <div class="inspire-item">⭐ Репутация профессионала</div>
+                        <div class="inspire-item">🔁 Возвращающиеся клиенты</div>
+                    </div>
+                </div>
+                <div class="fade-up" style="text-align: center;">
+                    <img src="https://gakrusso2000edu.github.io/edu/sbm/img/5smb.JPG" alt="Довольные клиенты" style="border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 24px;">
+                    <a href="https://t.me/WinnRusso" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== КАК ЭТО РАБОТАЕТ ===== -->
+    <section class="section section-alt" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title fade-up">Как проходит <span class="highlight">процедура?</span></h2>
+            <p class="section-subtitle fade-up">4 простых шага к результату. Всё автоматически — оператор свободен во время процедуры.</p>
+            <div class="steps">
+                <div class="step fade-up"><div class="step-number">1</div><h3>Диагностика</h3><p>Биоимпедансный тест определяет жир, жидкость, мышцы</p><span class="step-time">1 мин</span></div>
+                <div class="step fade-up"><div class="step-number">2</div><h3>Установка</h3><p>16 подушечек (1344 см²) крепятся на проблемные зоны</p><span class="step-time">7-10 мин</span></div>
+                <div class="step fade-up"><div class="step-number">3</div><h3>Процедура</h3><p>Ультразвук + электростимуляция + лимфодренаж работают автоматически</p><span class="step-time">30-45 мин</span></div>
+                <div class="step fade-up"><div class="step-number">4</div><h3>Результат</h3><p>Повторные замеры показывают минус 2-5 см сразу</p><span class="step-time">Сразу</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== СЕКРЕТ ЭФФЕКТИВНОСТИ ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="secret-box fade-up">
+                <h3>🧬 Почему клетки не «привыкают» к процедуре?</h3>
+                <p>Клетки человеческого тела обладают «памятью» и могут привыкать к внешним воздействиям, снижая эффективность процедур.</p>
+                <p><strong>Решение SBM:</strong> В каждой из 16 подушечек встроена <span class="secret-highlight">уникальная микросхема</span>, которая генерирует постоянно меняющиеся сигналы. Клетки не успевают «запомнить» воздействие — эффективность сохраняется на протяжении всего курса.</p>
+                <p style="font-weight: 600; color: var(--primary);">Это технология, которой нет ни у одного другого производителя в мире.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== РЕЗУЛЬТАТЫ ===== -->
+    <section class="section section-alt" id="results">
+        <div class="container">
+            <div class="results-content">
+                <div class="fade-up"><img src="https://gakrusso2000edu.github.io/edu/sbm/img/5smb.JPG" alt="Результаты" class="results-image"></div>
+                <div class="fade-up">
+                    <h2 style="margin-bottom: 16px;">Гарантированный результат <span class="highlight">или возврат денег</span></h2>
+                    <p>Если после первой процедуры объёмы не уменьшились на 2-5 см — <strong>вернём деньги</strong>. Такого ещё не было ни разу за 100+ процедур.</p>
+                    <div class="results-stats">
+                        <div class="result-stat"><div class="result-stat-number">100%</div><div class="result-stat-label">клиентов видят результат</div></div>
+                        <div class="result-stat"><div class="result-stat-number">0%</div><div class="result-stat-label">случаев без результата</div></div>
+                        <div class="result-stat"><div class="result-stat-number">2-5 см</div><div class="result-stat-label">минимум в 4 зонах</div></div>
+                        <div class="result-stat"><div class="result-stat-number">45 мин</div><div class="result-stat-label">максимум на сеанс</div></div>
+                    </div>
+                    <div class="results-guarantee"><h3>🛡️ Гарантия результата</h3><p>Мы настолько уверены в эффективности Smart Body Master, что гарантируем результат после первой процедуры. Нет результата — полный возврат оплаты.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== КОМПЛЕКТАЦИЯ ===== -->
+    <section class="section" id="kit">
+        <div class="container">
+            <h2 class="section-title fade-up">Что входит в <span class="highlight">комплект «под ключ»?</span></h2>
+            <p class="section-subtitle fade-up">Всё необходимое для запуска студии. Обучение и маркетинговая поддержка включены.</p>
+            <div class="kit-grid">
+                <div class="kit-item fade-up"><div class="kit-item-icon">📦</div><h3>Аппарат SBM</h3><p>45×45 см, 4,5 кг. 27 программ</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">🛏️</div><h3>Массажный стол</h3><p>С матрасом и кармашками для подушечек</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">🔘</div><h3>16 подушечек</h3><p>Ультразвуковые, 1344 см² общая площадь</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">📐</div><h3>Биоимпеданс</h3><p>Датчик для мгновенного анализа</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">🎭</div><h3>LED-маска для лица</h3><p>Фотобиомодуляция: красный свет + пептиды</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">⚡</div><h3>Маска электростимуляции</h3><p>16 мини-электродов для подтяжки лица</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">📚</div><h3>Обучение</h3><p>1-2 дня + 2 подробные инструкции</p></div>
+                <div class="kit-item fade-up"><div class="kit-item-icon">📋</div><h3>Маркетинг</h3><p>Флайеры, скрипты, модели цен</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ДЛЯ КОГО ЭТОТ БИЗНЕС ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-up">👥 Идеально подходит, если вы:</h2>
+            <div class="for-who-grid">
+                <div class="fade-up">
+                    <ul class="for-who-list">
+                        <li>Владеете салоном красоты, СПА или фитнес-студией</li>
+                        <li>Работаете косметологом, массажистом, тренером</li>
+                        <li>Хотите запустить бизнес с быстрой окупаемостью</li>
+                        <li>Цените итальянское качество и инновации</li>
+                        <li>Ищете бизнес без тяжёлого физического труда</li>
+                    </ul>
+                </div>
+                <div class="for-who-not fade-up">
+                    <h4>Не подходит, если:</h4>
+                    <ul>
+                        <li>Ищете «волшебную таблетку» без вложений</li>
+                        <li>Не готовы работать с клиентами</li>
+                        <li>Ожидаете доход без участия в процессе</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== БИЗНЕС ===== -->
+    <section class="section section-dark" id="business">
+        <div class="container">
+            <h2 class="section-title fade-up">💰 Реальная экономика с учётом лизинга</h2>
+            <p class="section-subtitle fade-up">Оборудование стоит <strong>5 000 000 ₽</strong>, но вам не нужно платить всю сумму сразу. Доступен лизинг на 5 лет с платежом <strong>~200 000 ₽/месяц</strong>.</p>
+
+            <div class="business-table fade-up">
+                <div class="business-table-header"><span>Загрузка</span><span>Выручка/мес</span><span>Лизинг</span><span>Опер. расходы</span><span>Чистая прибыль</span><span>Окупаемость</span></div>
+                <div class="business-table-row"><span>1–2 клиента</span><span>~493 000 ₽</span><span>−200 000 ₽</span><span>−74 000 ₽</span><span><strong>~219 000 ₽</strong></span><span>~23 мес</span></div>
+                <div class="business-table-row"><span>3 клиента ⭐</span><span>~986 000 ₽</span><span>−200 000 ₽</span><span>−148 000 ₽</span><span><strong>~638 000 ₽</strong></span><span>~8 мес</span></div>
+                <div class="business-table-row total"><span>6 клиентов 🚀</span><span>~1 973 000 ₽</span><span>−200 000 ₽</span><span>−296 000 ₽</span><span><strong>~1 477 000 ₽</strong></span><span><strong>~3,5 мес</strong></span></div>
+            </div>
+
+            <div class="business-note fade-up">⚡ <strong>1 оператор = 2–3 аппарата</strong> → доход растёт, расходы на персонал — нет. При 2 аппаратах чистая прибыль удваивается!</div>
+
+            <div style="text-align: center; margin-top: 32px;" class="fade-up">
+                <a href="https://t.me/WinnRusso" class="btn btn-accent btn-lg" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ГИБКИЕ МОДЕЛИ ОПЛАТЫ ===== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">🎁 Гибкая ценовая политика для быстрого старта</h2>
+            <p class="section-subtitle fade-up">Мы понимаем, что важно быстро создать клиентскую базу. Поэтому предлагаем несколько моделей:</p>
+
+            <div class="pricing-table fade-up">
+                <div class="pricing-header"><span>Модель</span><span>Цена первой процедуры</span><span>Доплата за результат</span></div>
+                <div class="pricing-row"><span><strong>Стандарт</strong></span><span>13 700 ₽</span><span>—</span></div>
+                <div class="pricing-row"><span>Со скидкой</span><span>9 000 ₽</span><span>200–300 ₽/см</span></div>
+                <div class="pricing-row"><span>Пробная</span><span>4 500 ₽</span><span>400–600 ₽/см</span></div>
+                <div class="pricing-row highlight"><span>Оплата за результат</span><span>0 ₽</span><span>900 ₽/см</span></div>
+            </div>
+
+            <div class="pricing-note fade-up">📊 <strong>Статистика:</strong> 100+ процедур — 100% результат. Ни одного случая без эффекта!</div>
+
+            <div class="pricing-package fade-up">🎁 <strong>Пакетное предложение:</strong> 5 процедур сразу → <strong>−30% скидка</strong> + <strong>LED-маска для лица в подарок</strong></div>
+
+            <div style="text-align: center; margin-top: 32px;" class="fade-up">
+                <a href="https://t.me/WinnRusso" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5 КЛЮЧЕЙ К УСПЕХУ ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-up">🎯 Студия Smart Body Master — это 5 ключей к успеху</h2>
+            <div class="keys-grid">
+                <div class="key-card fade-up"><h3>💰 Высокий доход</h3><p>Реальная возможность выйти на 2+ млн ₽/мес с одного аппарата</p></div>
+                <div class="key-card fade-up"><h3>🤝 Всесторонняя поддержка</h3><p>Обучение 1–2 дня, маркетинг, техподдержка 24/7, готовые инструкции</p></div>
+                <div class="key-card fade-up"><h3>⚡ Быстрая окупаемость</h3><p>3,5–8 месяцев при средней загрузке — и чистая прибыль</p></div>
+                <div class="key-card fade-up"><h3>🛍️ Готовая клиентская база</h3><p>Реферальная система, флайеры, скрипты, пакетные предложения</p></div>
+                <div class="key-card fade-up"><h3>📈 Гибкая ценовая политика</h3><p>Модели: 13 700 ₽ / 9 000 ₽ / 4 500 ₽ + оплата за результат</p></div>
+            </div>
+            <div style="text-align: center; margin-top: 32px;" class="fade-up">
+                <a href="https://t.me/WinnRusso" class="btn btn-accent btn-lg" target="_blank" rel="noopener">Узнать стоимость и получить фин. модель →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРОГРАММЫ ===== -->
+    <section class="section" id="programs">
+        <div class="container">
+            <h2 class="section-title fade-up">27 программ для <span class="highlight">полного преображения</span></h2>
+            <p class="section-subtitle fade-up">25 программ для тела + 2 программы для лица. Всё настраивается автоматически.</p>
+            <div class="programs-tabs">
+                <button class="programs-tab active" onclick="switchTab('body')">Для тела (25)</button>
+                <button class="programs-tab" onclick="switchTab('face')">Для лица (2)</button>
+            </div>
+            <div class="programs-content active" id="body-programs">
+                <div class="fade-up"><img src="https://gakrusso2000edu.github.io/edu/sbm/img/3sbmbody.JPG" alt="Процедура для тела" class="programs-image"></div>
+                <div class="fade-up">
+                    <h3 style="margin-bottom: 20px;">Программы для тела</h3>
+                    <ul class="programs-list">
+                        <li>Удаление жировых отложений в проблемных зонах</li>
+                        <li>Вывод лишней жидкости (отёки, целлюлит)</li>
+                        <li>Восстановление мышечной массы</li>
+                        <li>Подтяжка кожи после похудения</li>
+                        <li>Локальная коррекция: живот, бёдра, ягодицы, руки, спина</li>
+                        <li>Борьба со всеми 3 видами целлюлита</li>
+                        <li>Коррекция фигуры без хирургии</li>
+                        <li>Гелевые накладки для проработки пресса и мышц</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="programs-content" id="face-programs">
+                <div class="fade-up"><img src="https://gakrusso2000edu.github.io/edu/sbm/img/4smbface.JPG" alt="Процедура для лица" class="programs-image"></div>
+                <div class="fade-up">
+                    <h3 style="margin-bottom: 20px;">Программы для лица</h3>
+                    <h4 style="margin: 16px 0 8px; color: var(--primary);">1. Фотобиомодуляция (20 мин)</h4>
+                    <ul class="programs-list" style="margin-bottom: 24px;">
+                        <li>Красный холодный свет + пептидный состав</li>
+                        <li>Очистка межклеточного пространства от токсинов</li>
+                        <li>Стимуляция выработки коллагена</li>
+                        <li>Разглаживание микроморщин, осветление пигментации</li>
+                        <li>Курс: до 5 процедур, перерыв 6 месяцев</li>
+                    </ul>
+                    <h4 style="margin: 16px 0 8px; color: var(--primary);">2. Электростимуляция мышц лица</h4>
+                    <ul class="programs-list">
+                        <li>16 мини-электродов по периметру лица</li>
+                        <li>Подтяжка кожи при похудении</li>
+                        <li>Предотвращение обвисания и морщин</li>
+                        <li>Восстановление мышечного тонуса</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+    <section class="section section-alt" id="advantages">
+        <div class="container">
+            <h2 class="section-title fade-up">Почему Smart Body Master — <span class="highlight">это будущее?</span></h2>
+            <p class="section-subtitle fade-up">Уникальные преимущества для клиентов и владельцев бизнеса.</p>
+            <div class="advantages-grid">
+                <div class="advantage-card fade-up"><h3>🧠 Микросхемы в подушечках</h3><p>Клетки не «запоминают» сигнал — эффективность постоянная</p></div>
+                <div class="advantage-card fade-up"><h3>🤖 Отсутствие человеческого фактора</h3><p>Аппарат работает сам. Оператор свободен 45 минут</p></div>
+                <div class="advantage-card fade-up"><h3>💡 Минимальные расходы</h3><p>Подключение в розетку 220В. Расход как у телевизора</p></div>
+                <div class="advantage-card fade-up"><h3>📱 Мобильность</h3><p>45×45 см, вес 4,5 кг. Помещается в багажник</p></div>
+                <div class="advantage-card fade-up"><h3>🎯 Точечное воздействие</h3><p>Жир уходит именно там, где вы хотите</p></div>
+                <div class="advantage-card fade-up"><h3>🚀 Готовый бизнес</h3><p>Обучение, маркетинг, клиентская база — всё включено</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРОТИВОПОКАЗАНИЯ ===== -->
+    <section class="section" id="contraindications">
+        <div class="container">
+            <h2 class="section-title fade-up">🛡️ Безопасность — <span class="highlight">наш приоритет</span></h2>
+            <p class="section-subtitle fade-up">Побочных эффектов нет. Есть минимальные противопоказания.</p>
+            <div class="contraindications-wrapper fade-up">
+                <ul class="contraindications-list">
+                    <li>❌ Возраст до 18 лет (организм растёт)</li>
+                    <li>❌ Онкологические заболевания</li>
+                    <li>❌ Открытые раны на теле</li>
+                    <li>❌ Металлические импланты (кроме зубных)</li>
+                    <li>❌ Кардиостимулятор</li>
+                </ul>
+                <div class="contraindications-note"><p>✅ Всем остальным процедуры разрешены и полностью безопасны</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ГЕОГРАФИЯ ПРИСУТСТВИЯ ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-up">🌍 Smart Body Master — международная сеть</h2>
+            <p class="section-subtitle fade-up">Официальное представительство и действующие партнёры по всему миру.</p>
+            <div class="geo-grid">
+                <div class="geo-item fade-up"><div class="geo-item-flag">🇩🇪</div><h4>Германия</h4><p>Лейпциг — головной офис и склад</p></div>
+                <div class="geo-item fade-up"><div class="geo-item-flag">🇷🇺</div><h4>Россия</h4><p>Официальный представитель, декларации ЕАЭС</p></div>
+                <div class="geo-item fade-up"><div class="geo-item-flag">🇬🇧</div><h4>Англия</h4><p>Действующие партнёры</p></div>
+                <div class="geo-item fade-up"><div class="geo-item-flag">🇪🇸</div><h4>Испания</h4><p>Действующие партнёры</p></div>
+                <div class="geo-item fade-up"><div class="geo-item-flag">🇵🇱</div><h4>Польша</h4><p>Действующие партнёры</p></div>
+                <div class="geo-item fade-up"><div class="geo-item-flag">📍</div><h4>Москва / Крым</h4><p>Демонстрационные студии</p></div>
+            </div>
+            <div class="geo-facts fade-up">
+                <div class="geo-fact">Первые 4 комплекта уже работают в России</div>
+                <div class="geo-fact">20 комплектов продано на презентации в Лейпциге</div>
+                <div class="geo-fact">100+ процедур проведено — 100% результат</div>
+                <div class="geo-fact">Декларации ЕАЭС получены в мае 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ГДЕ ПОПРОБОВАТЬ ===== -->
+    <section class="section" id="locations">
+        <div class="container">
+            <h2 class="section-title fade-up">Запишитесь на <span class="highlight">бесплатную пробную процедуру</span></h2>
+            <p class="section-subtitle fade-up">Увидите результат своими глазами. Биоимпедансный анализ + консультация + процедура + повторные замеры.</p>
+            <div class="locations-grid">
+                <div class="location-card fade-up">
+                    <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/1e8cabe70-af68-451f-a27a-47748ea55124.png" alt="Москва" class="location-card-image">
+                    <div class="location-card-body">
+                        <h3>📍 Москва</h3>
+                        <p>Демонстрационная студия. Пробные процедуры, консультации, обучение.</p>
+                        <a href="https://t.me/WinnRusso" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Записаться в Москве</a>
+                    </div>
+                </div>
+                <div class="location-card fade-up">
+                    <img src="https://image.qwenlm.ai/public_source/b28ab0af-0793-46cc-a81e-d68582408c54/11e4454f3-7e40-4f6f-a6b6-ce7e1b2724de.png" alt="Крым" class="location-card-image">
+                    <div class="location-card-body">
+                        <h3>📍 Крым</h3>
+                        <p>Демонстрационная студия. Испытайте результат на собственном опыте.</p>
+                        <a href="https://t.me/WinnRusso" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Записаться в Крыму</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;" class="fade-up">
+                <p style="margin-bottom: 16px;"><strong>Что вас ждёт:</strong></p>
+                <p style="color: var(--text-light);">1. Биоимпедансный анализ &nbsp;•&nbsp; 2. Консультация &nbsp;•&nbsp; 3. Процедура (45 мин)<br>4. Повторные замеры &nbsp;•&nbsp; 5. Расчёт программы &nbsp;•&nbsp; 6. Консультация по оборудованию</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ФИНАЛЬНЫЙ CTA ===== -->
+    <section class="final-cta">
+        <div class="container fade-up">
+            <h2>Начните зарабатывать на технологии будущего уже сегодня</h2>
+            <p>Первые 4 комплекта уже работают в России. 20 комплектов продано в Европе. Владельцы зарабатывают от 2 млн ₽ в месяц.</p>
+            <div class="final-cta-buttons">
+                <a href="https://t.me/WinnRusso" class="btn btn-accent btn-lg" target="_blank" rel="noopener">💬 Узнать стоимость и получить фин. модель</a>
+                <a href="https://t.me/WinnRusso" class="btn btn-outline btn-lg" style="border-color: white; color: white;" target="_blank" rel="noopener">Записаться на процедуру</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ФУТЕР ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><img src="https://sbm.studio/images/Header_Footer/logo.png" alt="SBM" style="height: 28px;"> Smart Body Master</h3>
+                    <p>Итальянская технология коррекции фигуры от компании Cesare Quaranta (~40 лет на рынке). Официальный дистрибьютор в России и странах СНГ.</p>
+                    <div class="footer-trust">
+                        <p>✅ Официальный дистрибьютор Cesare Quaranta в России и СНГ</p>
+                        <p>📜 Декларации ЕАЭС получены в мае 2025</p>
+                        <p>🎯 100% результат после первой процедуры — или возврат средств</p>
+                        <p>🏢 Двухуровневый офис в Лейпциге (Германия)</p>
+                        <p>🌐 Два интернет-магазина: Германия (с 2020) + Россия</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#technology">Технология</a></li>
+                        <li><a href="#how-it-works">Как работает</a></li>
+                        <li><a href="#results">Результаты</a></li>
+                        <li><a href="#business">Для бизнеса</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Программы</h4>
+                    <ul>
+                        <li><a href="#programs">Для тела</a></li>
+                        <li><a href="#programs">Для лица</a></li>
+                        <li><a href="#contraindications">Противопоказания</a></li>
+                        <li><a href="#kit">Комплектация</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="https://t.me/WinnRusso" target="_blank" rel="noopener">Telegram: @WinnRusso</a></li>
+                        <li><a href="#locations">Москва</a></li>
+                        <li><a href="#locations">Крым</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Smart Body Master. Все права защищены. Оборудование сертифицировано как немедицинское. Декларации ЕАЭС получены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== МОДАЛЬНОЕ ОКНО ВИДЕО ===== -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-modal-close">&times;</span>
+            <div class="video-wrapper"><iframe id="videoIframe" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe></div>
+        </div>
+    </div>
+
+    <!-- ===== ПЛАВАЮЩАЯ КНОПКА TELEGRAM ===== -->
+    <a href="https://t.me/WinnRusso" class="floating-tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.75 3.98-1.73 6.64-2.88 7.97-3.44 3.8-1.58 4.59-1.86 5.1-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.01.06.01.24 0 .38z"/></svg>
+    </a>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Навигация при скролле
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { if (window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled'); });
+
+        // Мобильное меню
+        const navbarToggle = document.getElementById('navbarToggle'), mobileMenu = document.getElementById('mobileMenu');
+        navbarToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+        function closeMobile() { mobileMenu.classList.remove('open'); }
+
+        // Табы программ
+        function switchTab(tab) {
+            document.querySelectorAll('.programs-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.programs-content').forEach(c => c.classList.remove('active'));
+            if (tab === 'body') { document.querySelector('.programs-tab:first-child').classList.add('active'); document.getElementById('body-programs').classList.add('active'); }
+            else { document.querySelector('.programs-tab:last-child').classList.add('active'); document.getElementById('face-programs').classList.add('active'); }
+        }
+
+        // Анимация при скролле
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Плавный скролл
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { const target = document.querySelector(this.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); if(mobileMenu.classList.contains('open')) closeMobile(); } }); });
+
+        // Модальное окно видео
+        const modal = document.getElementById('videoModal'), iframe = document.getElementById('videoIframe'), closeBtn = document.querySelector('.video-modal-close');
+        const videoUrl = 'https://kinescope.io/embed/x76Hyyd7VEexGvzLGzURoF?autoplay=1';
+        document.querySelectorAll('.open-video-btn').forEach(btn => { btn.addEventListener('click', () => { iframe.src = videoUrl; modal.classList.add('active'); document.body.style.overflow = 'hidden'; }); });
+        function closeVideo() { modal.classList.remove('active'); iframe.src = ''; document.body.style.overflow = ''; }
+        closeBtn.addEventListener('click', closeVideo);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeVideo(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('active')) closeVideo(); });
+    </script>
+</body>
+</html>
